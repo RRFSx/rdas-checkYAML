@@ -1,0 +1,27 @@
+#!/usr/bin/env python
+import yaml, sys
+
+args=sys.argv
+nargs=len(args)-1
+if nargs <1:
+  print(f"Usage: ycheck <file> [silent]")
+  exit()
+fname=args[1]
+silent=False
+if nargs > 1:
+  silent=True
+
+if fname == "pipe":
+  yfile=sys.stdin
+else:
+  yfile=open(fname, 'r')
+
+if silent:
+  try:
+    data=yaml.safe_load(yfile)
+    sys.exit(0)
+  except yaml.YAMLError as e:
+    sys.exit(1)
+else:
+  print(yaml.safe_load(yfile))
+  
