@@ -8,7 +8,7 @@ source load_eva.sh
 Then
 ```
 git clone git@github.com:RRFSx/rdas-checkYAML
-cp rdas-checkYAML/* .
+ln -snf rdas-checkYAML/* .
 ./checkYAML.sh ../rrfs-test
 ```
 Example to check further on errors: 
