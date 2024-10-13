@@ -1,8 +1,9 @@
 # rdas-checkYAML
 
-Make sure you are under `$RDASApp/ush`
+Make sure you are under `$RDASApp/ush` and the EVA Python Environment is loaded
 ```
 cd $RDASApp/ush
+source load_eva.sh
 ```
 Then
 ```
@@ -12,5 +13,5 @@ cp rdas-checkYAML/* .
 ```
 Example to check further on errors: 
 ```
-ycheck ../rrfs-test/IODA/yaml/prepbufr_gpsipw.yaml
+./ycheck ../rrfs-test/IODA/yaml/prepbufr_gpsipw.yaml
 ```
