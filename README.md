@@ -1,7 +1,11 @@
 # rdas-checkYAML
 
+Make sure you are under `$RDASApp/ush`
 ```
 cd $RDASApp/ush
+```
+Then
+```
 git clone git@github.com:RRFSx/rdas-checkYAML
 cp rdas-checkYAML/* .
 ./checkYAML.sh ../rrfs-test
